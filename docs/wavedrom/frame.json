@@ -1,0 +1,17 @@
+{
+  "head": {
+    "text": "8-N-1 frame, byte 0xA5 (not to scale: 868 clocks per bit)",
+    "tick": 0
+  },
+  "foot": {
+    "text": "Wire order is LSB first: start, d0..d7, stop. Frame is 8680 clocks.",
+    "tock": 0
+  },
+  "signal": [
+    { "name": "tx_start", "wave": "010.........." },
+    { "name": "tx_busy",  "wave": "0.1.........0" },
+    { "name": "state",    "wave": "2.34.......52", "data": ["IDLE", "START", "DATA", "STOP", "IDLE"] },
+    { "name": "tx",       "wave": "1.01010.101.." },
+    { "name": "on wire",  "wave": "xx==========x", "data": ["start=0", "d0=1", "d1=0", "d2=1", "d3=0", "d4=0", "d5=1", "d6=0", "d7=1", "stop=1"] }
+  ]
+}

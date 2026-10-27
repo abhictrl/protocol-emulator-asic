@@ -1,0 +1,21 @@
+{
+  "head": {
+    "text": "tx_start sampled on the clock; start bit is visible the next cycle",
+    "tick": 0
+  },
+  "foot": {
+    "text": "clk_cnt stays 0 in IDLE and is cleared again when START is entered",
+    "tock": 0
+  },
+  "signal": [
+    { "name": "clk",      "wave": "p......" },
+    { "name": "tx_start", "wave": "010....", "node": ".a....." },
+    { "name": "tx_busy",  "wave": "0.1....", "node": "..b...." },
+    { "name": "tx",       "wave": "1.0...." },
+    { "name": "state",    "wave": "2.3....", "data": ["IDLE", "START"] },
+    { "name": "clk_cnt",  "wave": "2.=2345", "data": ["0", "0", "1", "2", "3", "4"] }
+  ],
+  "edge": [
+    "a~>b start bit and tx_busy, after the sampling edge"
+  ]
+}

@@ -5,3 +5,6 @@
 *.vcd
 xsim.dir/
 .Xil/
+obj_dir/
+.DS_Store
+.cursor/
